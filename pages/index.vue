@@ -27,6 +27,7 @@ const page = ref(1);
 <template>
   <div class="container" style="height:100vh !important; overflow: scroll;" ref="imgRef">
     <div v-for="(repo, idx) in diplayData" :key="repo" class="container__item">
+      <p>{{idx+1}}</p>
       <p>Repo Url: {{ repo.url }}</p>
       <p>Created Time: {{ new Date(repo.created_at) }}</p>
       <p>description:  {{ repo.description }}</p>
